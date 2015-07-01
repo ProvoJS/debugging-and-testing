@@ -1,0 +1,39 @@
+<html>
+
+<script>
+
+    function runJavascript(){
+        var num = 4;
+        var junk = 'junky';
+
+        function hey(){
+            console.log(junk);
+            console.log(num);
+        }
+
+        num = messWithANum(num);
+        num = messupMyNumMore(num);
+
+        hey();
+
+        document.getElementById("myNum").textContent=num;
+    }
+
+    function messWithANum(num){
+        return num*4;
+    }
+
+    function messupMyNumMore(num) {
+        return num*2*Math.random();
+    }
+
+</script>
+
+<body>
+Hi Guys, start debugging by opening up the console (right click on the page, choose 'Inspect Element', and then click
+on the sources tab). You can set break points in the javascript from there.
+<p id="myNum">0</p>
+<button type="button" onclick="runJavascript()">Click me to run some javascript</button>
+</body>
+
+</html>
